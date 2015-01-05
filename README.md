@@ -2,7 +2,54 @@
 
 # 8art
 
-8bit design thing with fuckin' javascript array 
+8bit design thing with fuckin' javascript array
+
+## usage
+
+```html
+
+<canvas id="you" width="300" height="300"></canvas>
+
+```
+
+```js
+
+var you = [
+    ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ccc","#ffffff","#ffffff","#ffffff","#ccc","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ccc","#ffffff","#ffffff","#ffffff","#ccc","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#8bae21","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#8bae21","#ffffff","#ffffff"],
+    ["#ffffff","#8bae21","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#8bae21","#ffffff"],
+    ["#ffffff","#8bae21","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#8bae21","#ffffff"],
+    ["#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21"],
+    ["#8bae21","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#8bae21"],
+    ["#ffffff","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
+    ["#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff"]
+];
+
+```
+
+```js
+
+var test = new $art({
+  target : document.getElementById("you"),
+  image  : you, 
+  size   : 10
+});
+
+test.draw();
+
+```
 
 ## future tasks
 
