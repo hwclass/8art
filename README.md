@@ -51,6 +51,10 @@ test.draw();
 
 ```
 
+## result
+
+![Result](http://i.hizliresim.com/Rb1mOR.png)
+
 ## future tasks
 
 - [ ] **Initial Release**
