@@ -4,14 +4,6 @@
 
 8bit design thing with fuckin' javascript array
 
-## install
-
-```html
-
-<script src="https://raw.githubusercontent.com/erayarslan/8art/master/8art.js" type="text/javascript"></script>
-
-```
-
 ## usage
 
 ```html
