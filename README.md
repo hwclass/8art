@@ -1,4 +1,19 @@
-8art
-====
+![Logo](http://fc08.deviantart.net/fs70/f/2014/245/0/a/8bit_deadpool_dancin_by_th3applejack-d7xr2oh.gif)
+
+# 8art
 
 8bit design thing with fuckin' javascript array 
+
+## future tasks
+
+- [ ] **Initial Release**
+- [ ] Test
+- [ ] And more development processes (best part)
+
+## contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
