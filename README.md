@@ -57,8 +57,8 @@ test.draw();
 
 ## future tasks
 
-- [ ] **Initial Release**
-- [ ] Test
+- [x] Initial Release
+- [ ] **Test**
 - [ ] And more development processes (best part)
 
 ## contributing
