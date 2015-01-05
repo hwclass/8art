@@ -42,9 +42,9 @@ var you = [
 ```js
 
 var test = new $art({
-  target : document.getElementById("you"),
-  image  : you, 
-  size   : 10
+  target : document.getElementById("you"), // canvas element
+  image  : you, // image arr
+  size   : 10 // pixel size
 });
 
 test.draw();
