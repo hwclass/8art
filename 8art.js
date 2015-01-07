@@ -30,14 +30,25 @@ var $art = function(o) {
     this.image = el.getContext("2d");
     this.draw = function() {
         for (var y = 0; y < self.height; y++) {
-            for (var x=0; x < self.width; x++) {
+            for (var x = 0; x < self.width; x++) {
                 if(obj[y][x] !== undefined && obj[y][x] !== "#ffffff") {
                     this.image.fillStyle = obj[y][x];
-                    this.image.fillRect(self.pixel_size * x, self.pixel_size * y, self.pixel_size,self.pixel_size);
+                    this.image.fillRect(self.pixel_size * x, self.pixel_size * y, self.pixel_size, self.pixel_size);
                     this.image.stroke();
                 }
             }
         }
+    };
+    this.resize = function(size) {
+    	self.image.clearRect(
+    		0,
+    		0, 
+    		self.image.canvas.width, 
+    		self.image.canvas.height
+    	);
+    	//
+    	self.pixel_size = size;
+    	self.draw();
     };
     //
     return this;
