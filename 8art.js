@@ -26,6 +26,8 @@ var $art = function $art(o) {
   //
   var self = this;
   //
+  var transparent = "#$$$$$$";
+  //
   var el = o.target;
   var obj = o.image;
   var pixel_size = o.size;
@@ -56,7 +58,7 @@ var $art = function $art(o) {
     //
     for (var y = 0; y < self.height; y++) {
       for (var x = 0; x < self.width; x++) {
-        if (obj[y][x] !== undefined && obj[y][x] !== "#ffffff") {
+        if (obj[y][x] !== undefined && obj[y][x] !== transparent) {
           this.image.fillStyle = obj[y][x];
           this.image.fillRect(self.pixel_size * x, self.pixel_size * y, self.pixel_size, self.pixel_size);
           this.image.stroke();

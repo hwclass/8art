@@ -8,53 +8,54 @@
 
 ```html
 
-<canvas id="you" width="300" height="300"></canvas>
+<canvas id="example" width="300" height="300"></canvas>
 
 ```
 
 ```js
 
 // from "designs/you.json"
+// "#$$$$$$" for transparent color <3
 
-var you = [
-  ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#cccccc","#ffffff","#ffffff","#ffffff","#cccccc","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#cccccc","#ffffff","#ffffff","#ffffff","#cccccc","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#8bae21","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#8bae21","#ffffff","#ffffff"],
-  ["#ffffff","#8bae21","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#8bae21","#ffffff"],
-  ["#ffffff","#8bae21","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#8bae21","#ffffff"],
-  ["#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21"],
-  ["#8bae21","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#8bae21"],
-  ["#ffffff","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff","#8bae21","#ffffff","#ffffff","#ffffff"],
-  ["#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff"]
+var exampleArr = [
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#cccccc","#$$$$$$","#$$$$$$","#$$$$$$","#cccccc","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#cccccc","#$$$$$$","#$$$$$$","#$$$$$$","#cccccc","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$"],
+  ["#$$$$$$","#8bae21","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#8bae21","#$$$$$$"],
+  ["#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21"],
+  ["#8bae21","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#8bae21"],
+  ["#$$$$$$","#8bae21","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#8bae21","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$"],
+  ["#$$$$$$","#$$$$$$","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#$$$$$$","#$$$$$$","#$$$$$$"]
 ];
 
 ```
 
 ```js
 
-var test = new $art({
-  target  : document.getElementById("you"), // canvas element
-  image   : you, // image arr
+var example = new $art({
+  target  : document.getElementById("example"), // canvas element
+  image   : exampleArr, // image arr
   size    : 10, // pixel size
   success : function() { // success callback
     alert("such w0w amaze!");
   }
 });
 
-test.draw();
+example.draw();
 
-test.resize(5); // yes, u can!
+example.resize(5); // yes, u can!
 
 ```
 
