@@ -14,6 +14,8 @@
 
 ```js
 
+// from "designs/you.json"
+
 var you = [
     ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#8bae21","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
     ["#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#8bae21","#8bae21","#ffffff","#ffffff","#ffffff","#ffffff"],
