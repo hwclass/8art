@@ -1,0 +1,29 @@
+{
+    "name": "8art",
+    "description": "8bit design thing with fuckin' javascript array",
+    "url": "http://erayarslan.com",
+    "keywords": [
+        "8bit",
+        "art",
+        "image",
+        "design",
+        "json",
+        "array",
+        "library",
+        "javascript"
+    ],
+    "author": "Eray Arslan <relfishere@gmail.com>",
+    "scripts": {
+        "build": "uglifyjs 8art.js --mangle --source-map 8art.min.js.map -o 8art.min.js"
+    },
+    "main": "8art.js",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/erayarslan/8art"
+    },
+    "devDependencies": {
+        "uglifyjs" : "*"
+    }
+}
