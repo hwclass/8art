@@ -33,7 +33,7 @@ var $art = function(o) {
     //
     this.image = el.getContext("2d");
     this.draw = function() {
-		calculateElementSize();
+	calculateElementSize();
     	//
         for (var y = 0; y < self.height; y++) {
             for (var x = 0; x < self.width; x++) {
