@@ -44,7 +44,10 @@ var you = [
 var test = new $art({
   target : document.getElementById("you"), // canvas element
   image  : you, // image arr
-  size   : 10 // pixel size
+  size   : 10, // pixel size
+  success: function() { // success callback
+    alert("such w0w amaze!");
+  }
 });
 
 test.draw();
