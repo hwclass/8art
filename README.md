@@ -49,6 +49,8 @@ var test = new $art({
 
 test.draw();
 
+test.resize(5); // yes, u can!
+
 ```
 
 ## result
