@@ -10,10 +10,12 @@ var $art = function(o) {
     var el = o.target;
     var obj = o.image;
     var pixel_size = o.size;
+    var success = o.success;
     //
     this.pixel_size = pixel_size;
     this.height = obj.length;
     this.width = 0;
+    this.success = success;
     //
     var calculateWidth = function(obj) {
         for (var i=0; i < self.height; i++) {
@@ -22,13 +24,17 @@ var $art = function(o) {
             }
         }
     };
+    var calculateElementSize = function() {
+    	el.width = self.pixel_size * self.width;
+    	el.height = self.pixel_size * self.height;
+    };
     //
     calculateWidth(obj);
-    el.width = self.pixel_size * this.width;
-    el.height = self.pixel_size * this.height;
     //
     this.image = el.getContext("2d");
     this.draw = function() {
+		calculateElementSize();
+    	//
         for (var y = 0; y < self.height; y++) {
             for (var x = 0; x < self.width; x++) {
                 if(obj[y][x] !== undefined && obj[y][x] !== "#ffffff") {
@@ -38,6 +44,8 @@ var $art = function(o) {
                 }
             }
         }
+        //
+        if(self.success) { self.success() };
     };
     this.resize = function(size) {
     	self.image.clearRect(
