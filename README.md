@@ -42,10 +42,10 @@ var you = [
 ```js
 
 var test = new $art({
-  target : document.getElementById("you"), // canvas element
-  image  : you, // image arr
-  size   : 10, // pixel size
-  success: function() { // success callback
+  target  : document.getElementById("you"), // canvas element
+  image   : you, // image arr
+  size    : 10, // pixel size
+  success : function() { // success callback
     alert("such w0w amaze!");
   }
 });
