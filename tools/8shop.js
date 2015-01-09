@@ -13,7 +13,5 @@ var $shop = function $shop(o) {
         return new $shop(o);
     }
     //
-    var self = this;
-    //
     return this;
 };
