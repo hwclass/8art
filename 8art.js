@@ -23,21 +23,21 @@ var $art = function $art(o) {
   if (!(this instanceof $art)) {
     return new $art(o);
   }
-  //
+  
   var self = this;
-  //
+  
   var transparent = "#$$$$$$";
-  //
+  
   var el = o.target;
   var obj = o.image;
   var pixel_size = o.size;
   var success = o.success;
-  //
+  
   this.pixel_size = pixel_size;
   this.height = obj.length;
   this.width = 0;
   this.success = success;
-  //
+  
   var calculateWidth = function(obj) {
     for (var i=0; i < self.height; i++) {
       if (obj[i].length > self.width) {
@@ -49,13 +49,13 @@ var $art = function $art(o) {
     el.width = self.pixel_size * self.width;
     el.height = self.pixel_size * self.height;
   };
-  //
+  
   calculateWidth(obj);
-  //
+  
   this.image = el.getContext("2d");
   this.draw = function() {
     calculateElementSize();
-    //
+    
     for (var y = 0; y < self.height; y++) {
       for (var x = 0; x < self.width; x++) {
         if (obj[y][x] !== undefined && obj[y][x] !== transparent) {
@@ -65,7 +65,7 @@ var $art = function $art(o) {
         }
       }
     }
-    //
+    
     if(self.success) { self.success(); };
   };
   this.resize = function(size) {
@@ -79,6 +79,6 @@ var $art = function $art(o) {
     self.pixel_size = size;
     self.draw();
   };
-  //
+  
   return this;
 };
